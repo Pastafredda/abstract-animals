@@ -7,12 +7,22 @@ public class Main {
         Aquila aquila = new Aquila();
         Delfino delfino= new Delfino();
 
-        Animale[] animals = {cane,passerotto,aquila,delfino};
-
-        for (int i = 0; i < animals.length ; i++) {
-            animals[i].verso();
-            animals[i].mangia();
-            animals[i].dormi();
-        }
+        delfino.verso();
+        delfino.mangia();
+        faiNuotare(delfino);
+        cane.verso();
+        cane.mangia();
+        aquila.mangia();
+        aquila.verso();
+        faiVolare(aquila);
+        passerotto.verso();
+        passerotto.mangia();
+        faiVolare(passerotto);
     }
+        public static void faiVolare(CanFly vola){
+            vola.vola();
+        };
+        public static void faiNuotare(CanSwim nuota){
+            nuota.nuota();
+        }
 }
